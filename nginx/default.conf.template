@@ -6,10 +6,9 @@ server {
     root         /usr/share/nginx/html;
     index        index.html;
 
-    # Older mime.types files predate AVIF, so declare it explicitly.
-    types {
-        image/avif avif;
-    }
+    # No types block here on purpose: declaring one replaces the inherited
+    # mime.types table instead of adding to it, which drops text/html and makes
+    # browsers download the page.  nginx 1.27's mime.types already maps avif.
 
     gzip              on;
     gzip_types        text/css application/javascript application/json;
@@ -27,6 +26,7 @@ server {
 
     location /healthz {
         access_log off;
+        default_type text/plain;
         return 200 "ok\n";
     }
 
