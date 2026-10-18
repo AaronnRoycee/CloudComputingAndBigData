@@ -1,0 +1,10 @@
+# Render Blueprint.  In Render: New > Blueprint, point it at this repo.
+# Render builds the Dockerfile and injects PORT, which nginx reads at startup.
+services:
+  - type: web
+    name: cse6332-project1
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /healthz
+    autoDeploy: true

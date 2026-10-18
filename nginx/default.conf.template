@@ -1,0 +1,36 @@
+# ${PORT} is substituted at container start by the nginx image's envsubst step.
+# Locally PORT defaults to 8080 (set in the Dockerfile); Render injects its own.
+server {
+    listen       ${PORT};
+    server_name  _;
+    root         /usr/share/nginx/html;
+    index        index.html;
+
+    # Older mime.types files predate AVIF, so declare it explicitly.
+    types {
+        image/avif avif;
+    }
+
+    gzip              on;
+    gzip_types        text/css application/javascript application/json;
+    gzip_min_length   512;
+
+    # Hashless filenames, so let the browser revalidate HTML but cache assets.
+    location = /index.html {
+        add_header Cache-Control "no-cache";
+    }
+
+    location ~* \.(avif|png|css|js)$ {
+        expires 7d;
+        add_header Cache-Control "public";
+    }
+
+    location /healthz {
+        access_log off;
+        return 200 "ok\n";
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}

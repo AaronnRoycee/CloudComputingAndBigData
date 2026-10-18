@@ -1,0 +1,76 @@
+{
+  "images": [
+    {
+      "file": "sticker_1",
+      "title": "Shock",
+      "alt": "Red octopus character with huge eyes glancing upward, motion lines above its head",
+      "description": "Eyes wide and darting upward with shock lines overhead, like a deploy that failed on the first push."
+    },
+    {
+      "file": "sticker_2",
+      "title": "Confusion",
+      "alt": "Red octopus character with mismatched eyes looking up and a small puzzled mouth",
+      "description": "Mismatched eyes and a crooked little mouth: the universal face of reading an error message twice."
+    },
+    {
+      "file": "sticker_3",
+      "title": "Regret",
+      "alt": "Red octopus character covering its mouth with both tentacles, eyes squeezed shut",
+      "description": "Both tentacles clapped over its mouth with eyes shut tight, hiding from a commit it should not have made."
+    },
+    {
+      "file": "sticker_4",
+      "title": "Coffee Break",
+      "alt": "Red octopus character sipping from a cream colored mug with eyes closed contentedly",
+      "description": "Eyes closed around a warm mug. The calmest moment of the build, right before the logs scroll."
+    },
+    {
+      "file": "sticker_5",
+      "title": "Frustration",
+      "alt": "Red octopus character with furrowed brow and a sharp downturned frown",
+      "description": "Furrowed brow and a hard frown, aimed squarely at a port that is already in use."
+    },
+    {
+      "file": "sticker_6",
+      "title": "Delight",
+      "alt": "Red octopus character laughing with wide open eyes and a big open mouth",
+      "description": "Wide eyes and an open laugh, caught the instant the container finally reports healthy."
+    },
+    {
+      "file": "sticker_7",
+      "title": "Smug",
+      "alt": "Red octopus character with a sly sideways glance and a lopsided grin",
+      "description": "A sideways glance and a lopsided grin, worn by anyone who fixed it by deleting four lines."
+    },
+    {
+      "file": "sticker_8",
+      "title": "Queasy",
+      "alt": "Red octopus character trembling with a wobbly tongue out and shake lines around it",
+      "description": "Trembling with shake lines and a wobbly tongue out, the look of a live demo with no backup plan."
+    },
+    {
+      "file": "sticker_9",
+      "title": "Unimpressed",
+      "alt": "Red octopus character with one eye half closed in a flat deadpan stare",
+      "description": "One eye half closed in a flat deadpan stare, reserved for advice that begins with have you tried."
+    },
+    {
+      "file": "sticker_10",
+      "title": "Despair",
+      "alt": "Red octopus character bawling with blue tears streaming down and mouth wide open",
+      "description": "Blue tears streaming and mouth wide open, the full collapse of losing unsaved work."
+    },
+    {
+      "file": "sticker_11",
+      "title": "Nervous",
+      "alt": "Red octopus character with large eyes glancing to the side and a tiny dot of a mouth",
+      "description": "Large eyes cutting to the side above a tiny dot of a mouth, hoping nobody asks a follow up question."
+    },
+    {
+      "file": "sticker_12",
+      "title": "Surprise",
+      "alt": "Red octopus character with round startled eyes and a small open mouth",
+      "description": "Round startled eyes and a small open mouth, the face of a notification arriving at 2 a.m."
+    }
+  ]
+}
