@@ -1,20 +1,13 @@
-# ${PORT} is substituted at container start by the nginx image's envsubst step.
-# Locally PORT defaults to 8080 (set in the Dockerfile); Render injects its own.
 server {
     listen       ${PORT};
     server_name  _;
     root         /usr/share/nginx/html;
     index        index.html;
 
-    # No types block here on purpose: declaring one replaces the inherited
-    # mime.types table instead of adding to it, which drops text/html and makes
-    # browsers download the page.  nginx 1.27's mime.types already maps avif.
-
     gzip              on;
     gzip_types        text/css application/javascript application/json;
     gzip_min_length   512;
 
-    # Hashless filenames, so let the browser revalidate HTML but cache assets.
     location = /index.html {
         add_header Cache-Control "no-cache";
     }

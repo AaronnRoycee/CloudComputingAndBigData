@@ -5,6 +5,8 @@ description, and a click-to-enlarge viewer that cycles through them.
 
 Aaron Pantoja
 
+**Live site:** <https://cloudcomputingandbigdata.onrender.com>
+
 ## Run it locally
 
     docker compose up -d --build
@@ -34,12 +36,12 @@ check.
 
 ## Images
 
+These are personal images, not the set supplied with the assignment, so they are
+included in the submission archive.
+
 Sources are 200x200 AVIF. Each is served through a `<picture>` element with a
 PNG fallback so browsers without AVIF support still render it. Grid images are
-lazy loaded.
-
-Per the assignment, the image files are **not** included in the submission
-archive — see `site/images/PLACEHOLDER.txt`.
+lazy loaded. Filenames and captions are defined in `site/data/images.json`.
 
 ## Interaction
 
@@ -50,6 +52,3 @@ archive — see `site/images/PLACEHOLDER.txt`.
 ## Submission archive
 
     ./scripts/make-submission-zip.sh
-
-Writes `dist/cse6332-project1-site.zip` with the source files and without the
-images.

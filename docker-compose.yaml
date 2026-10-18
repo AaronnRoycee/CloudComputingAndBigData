@@ -1,4 +1,3 @@
-# Local development.  Start:  docker compose up -d --build   then open http://localhost:8081
 services:
   gallery:
     build: .
@@ -8,5 +7,4 @@ services:
     environment:
       PORT: "8080"
     ports:
-      # 8081 on the host to stay clear of the course container's 8080.
       - "127.0.0.1:8081:8080"

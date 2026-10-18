@@ -1,6 +1,3 @@
-// Gallery for CSE 6332 Project 1. Reads data/images.json, renders a grid of
-// cards, and drives a lightbox that cycles through the images.
-
 const gallery = document.getElementById('gallery');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
@@ -19,7 +16,6 @@ function render() {
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'card';
-    // AVIF first with a PNG fallback, so older browsers still show the art.
     card.innerHTML = `
       <picture>
         <source srcset="images/${image.file}.avif" type="image/avif">
@@ -62,7 +58,6 @@ document.getElementById('lightbox-close').addEventListener('click', close);
 document.getElementById('lightbox-prev').addEventListener('click', () => show(current - 1));
 document.getElementById('lightbox-next').addEventListener('click', () => show(current + 1));
 
-// Clicking the dimmed backdrop (but not the figure itself) also closes.
 lightbox.addEventListener('click', (event) => {
   if (event.target === lightbox) close();
 });

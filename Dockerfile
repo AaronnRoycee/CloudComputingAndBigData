@@ -1,8 +1,6 @@
 FROM nginx:1.27-alpine
 
-# Render assigns the listening port via $PORT; 8080 is the local default.
 ENV PORT=8080
-# Restrict envsubst to PORT so nginx variables like $uri survive templating.
 ENV NGINX_ENVSUBST_FILTER="PORT"
 
 COPY nginx/default.conf.template /etc/nginx/templates/default.conf.template
