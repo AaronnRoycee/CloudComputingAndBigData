@@ -13,6 +13,7 @@ let lastFocused = null;
 function render() {
   gallery.innerHTML = '';
   images.forEach((image, index) => {
+    const item = document.createElement('li');
     const card = document.createElement('button');
     card.type = 'button';
     card.className = 'card';
@@ -24,7 +25,8 @@ function render() {
       <h2>${image.title}</h2>
       <p>${image.description}</p>`;
     card.addEventListener('click', () => open(index));
-    gallery.append(card);
+    item.append(card);
+    gallery.append(item);
   });
   gallery.setAttribute('aria-busy', 'false');
 }
